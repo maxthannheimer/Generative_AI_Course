@@ -1,5 +1,5 @@
 # Two Player Game
-Created by  Olaf Böckmann, Evelyn Hoffarth, Paul Kohler, Max Thannheimer and lots of prompts for VSCode/ Github Copilot in dem Kurs "Generative AI" von Frank Müller.
+Created by  Olaf Böckmann, Evelyn Hoffarth, Paul Kohler, Max Thannheimer and lots of prompts for VSCode/ Github Copilot in the course "Generative AI" by Frank Müller.
 
 ## Overview
 This is a two-player game where each player is represented as a ball on the screen. One player has a mouth on one side of the ball and can chase the other player. The objective is for the player with the mouth to "eat" the other player.
