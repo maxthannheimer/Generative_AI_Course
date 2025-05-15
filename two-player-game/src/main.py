@@ -34,14 +34,23 @@ class Player:
 
     def move(self):
         keys = pygame.key.get_pressed()
+        new_position = self.position[:]
+
         if keys[self.controls['up']] and self.position[1] - self.size > 0:
-            self.position[1] -= self.speed
+            new_position[1] -= self.speed
         if keys[self.controls['down']] and self.position[1] + self.size < HEIGHT:
-            self.position[1] += self.speed
+            new_position[1] += self.speed
         if keys[self.controls['left']] and self.position[0] - self.size > 0:
-            self.position[0] -= self.speed
+            new_position[0] -= self.speed
         if keys[self.controls['right']] and self.position[0] + self.size < WIDTH:
-            self.position[0] += self.speed
+            new_position[0] += self.speed
+
+        # Create a temporary rectangle for the player's new position
+        player_rect = pygame.Rect(new_position[0] - self.size, new_position[1] - self.size, self.size * 2, self.size * 2)
+
+        # Check for collision with the wall
+        if not player_rect.colliderect(wall):
+            self.position = new_position  # Update position only if no collision
 
     def draw(self, screen):
         if self.image:
@@ -61,6 +70,9 @@ player1 = Player([200, 200], 50, (255, 0, 0),
 player2 = Player([1600, 800], 50, (0, 0, 255), 
                  {'up': pygame.K_UP, 'down': pygame.K_DOWN, 'left': pygame.K_LEFT, 'right': pygame.K_RIGHT},
                  image_path="/home/thannhmx/Git/Generative_AI_Course/two-player-game/src/frank-müller.png")  # Replace with the actual path to your image
+
+# Define the wall
+wall = pygame.Rect(WIDTH // 2 - 50, HEIGHT // 4, 100, HEIGHT // 2)  # A vertical wall in the middle
 
 def show_title_screen():
     # Load the logo
@@ -147,6 +159,9 @@ while running:
     # Draw players
     player1.draw(screen)
     player2.draw(screen)
+
+    # Draw the wall
+    pygame.draw.rect(screen, (255, 255, 255), wall)  # White wall
 
     # Display scores
     score_text1 = font.render(f"Frank Müller Score: {player1.score}", True, (255, 255, 255))
