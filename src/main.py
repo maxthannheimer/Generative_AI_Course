@@ -66,17 +66,17 @@ class Player:
 # Create player instances with adjusted starting positions
 player1 = Player([200, 200], 50, (255, 0, 0), 
                  {'up': pygame.K_w, 'down': pygame.K_s, 'left': pygame.K_a, 'right': pygame.K_d}, 
-                 image_path="/home/thannhmx/Git/Generative_AI_Course/two-player-game/src/KI-Geldberg.jpg")  # Replace with the actual path to your image
+                 image_path="/home/thannhmx/Git/Generative_AI_Course/src/KI-Geldberg.jpg")  # Replace with the actual path to your image
 player2 = Player([1600, 800], 50, (0, 0, 255), 
                  {'up': pygame.K_UP, 'down': pygame.K_DOWN, 'left': pygame.K_LEFT, 'right': pygame.K_RIGHT},
-                 image_path="/home/thannhmx/Git/Generative_AI_Course/two-player-game/src/frank-müller.png")  # Replace with the actual path to your image
+                 image_path="/home/thannhmx/Git/Generative_AI_Course/src/frank-müller.png")  # Replace with the actual path to your image
 
 # Define the wall
 wall = pygame.Rect(WIDTH // 2 - 50, HEIGHT // 4, 100, HEIGHT // 2)  # A vertical wall in the middle
 
 def show_title_screen():
     # Load the logo
-    logo = pygame.image.load("/home/thannhmx/Git/Generative_AI_Course/two-player-game/src/logo.png")
+    logo = pygame.image.load("/home/thannhmx/Git/Generative_AI_Course/src/logo.png")
     logo = pygame.transform.scale(logo, (400, 400))  # Scale the logo
 
     # Title screen loop
