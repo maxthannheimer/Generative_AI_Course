@@ -40,7 +40,7 @@ python src/main.py
 - The player with the mouth (Player 1) must chase and eat Player 2.
 - When Player 1 successfully "eats" Player 2, Player 2 will disappear from the screen, and Player 1 will gain points.
 
-### HAMBURGERS Mode
+### HAMBURGER Mode
 - In this mode, small hamburgers randomly spawn on the field.
 - When a player touches a hamburger, it disappears, and the player gains 0.5 points.
 - The game continues with the same chasing mechanics as NORMAL mode.
@@ -51,7 +51,7 @@ python src/main.py
 ## Title Screen
 - The game starts with a title screen where you can choose between two modes:
   - **NORMAL Mode**: Press `SPACE` to start the game in NORMAL mode.
-  - **HAMBURGERS Mode**: Press `ENTER` to start the game in HAMBURGERS mode.
+  - **HAMBURGER Mode**: Press `ENTER` to start the game in HAMBURGER mode.
 
 ## Contributing
 Feel free to fork the repository and submit pull requests for any improvements or features you would like to add!
