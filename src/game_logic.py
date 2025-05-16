@@ -13,8 +13,8 @@ def check_collision(player1, player2):
     return distance < (player1.size + player2.size) / 2
 
 def reset_game(player1, player2):
-    player1.position = [100, 100]  # Reset to starting position
-    player2.position = [400, 400]  # Reset to starting position
+    player1.position = [200, 200]  # Reset to starting position
+    player2.position = [1600, 800]  # Reset to starting position
     player1.size = 100  # Reset size
     player2.size = 100  # Reset size
 
